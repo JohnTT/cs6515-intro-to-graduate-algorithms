@@ -1,10 +1,11 @@
-// Package ra1 implements modular exponentiation using repeated squaring.
+// Package ra1 implements modular arithmetic required for randomized algoithms.
 package ra1
 
 func isEven(y int) bool {
 	return y&1 == 0
 }
 
+// ModExp calculates x^y % N.
 func ModExp(x, y, N int) int {
 	if y == 0 {
 		return 1
